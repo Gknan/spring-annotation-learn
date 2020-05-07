@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--包扫描，在 base-package子包下的标注了 @Service @Component @Controller @Repository 的组件都会被扫描加进容器中-->
+<!--    <context:component-scan base-package="cn.hust.spring" use-default-filters="false"></context:component-scan>-->
+
+    <bean id="person" class="cn.hust.spring.bean.Person" scope="prototype" init-method="getAge" destroy-method="getAge">
+        <property name="age" value="18"></property>
+        <property name="name" value="张三"></property>
+    </bean>
+
+</beans>
