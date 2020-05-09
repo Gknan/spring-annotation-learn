@@ -16,10 +16,10 @@ public class IOCTest_LifeCircle {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(BeanLifeCricleConfig.class);
 
         System.out.println("容器创建完成...");
-        Car bean = applicationContext.getBean(Car.class);
-        Car bean2 = applicationContext.getBean(Car.class);
+//        Car bean = applicationContext.getBean(Car.class);
+//        Car bean2 = applicationContext.getBean(Car.class);
 
-        System.out.println(bean == bean2);
+//        System.out.println(bean == bean2);
         applicationContext.destroy();
     }
 
